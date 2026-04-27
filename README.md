@@ -1,0 +1,2 @@
+# auth
+faq/terms

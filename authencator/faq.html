@@ -41,6 +41,7 @@
             margin-top: 0.75rem;
             color: #444;
             display: none;
+            white-space: pre-line;
         }
         .answer.open {
             display: block;
@@ -52,82 +53,221 @@
         .icon.open {
             transform: rotate(45deg);
         }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem 0;
+            color: #222;
+        }
     </style>
 </head>
 <body>
     <h1>Frequently Asked Questions</h1>
     <p class="intro">
-        Find answers to common questions about Authenticator App. If you don’t see what you’re looking for, contact me at supportdeepocen@gmail.com.
+        Find answers to common questions about Authenticator App. If you don’t see what you’re looking for, contact our support team at supportdeepocen@gmail.com.
     </p>
 
+    <div class="section-title">How Authenticator Works</div>
     <div class="faq-container">
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>What is Authenticator App?</span>
+                <span>What is an Authenticator?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                Authenticator App is a free two-factor authentication (2FA) app that generates time-based one-time passwords (TOTP) for your online accounts, helping you add an extra layer of security.
+                An Authenticator is a security application used to generate one-time passwords (OTPs) or codes. These codes provide an additional layer of security for various accounts, often as a part of two-factor authentication (2FA) processes.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>Is Authenticator App free to use?</span>
+                <span>How does it generate codes?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                Yes, Authenticator App is completely free to download and use. There are no hidden fees or subscriptions required for core features.
+                The Authenticator app uses a time-based or counter-based algorithm to generate a unique, temporary code. For time-based tokens, each code is valid for a short period (usually 30 seconds) before a new one is generated.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>Does Authenticator App store my accounts online?</span>
+                <span>Do I need an internet connection to use Authenticator?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                No. All your account data is stored locally on your device. I do not sync or store your 2FA codes on external servers.
+                No, internet access is not required to generate codes. The app functions offline as it relies on a pre-shared key and the current time or a counter to generate the OTP.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>How do I add a new account?</span>
+                <span>How do I set up Authenticator with my accounts?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                You can add a new account by scanning a QR code or manually entering the secret key provided by your service provider. The app will automatically generate time-based codes for you.
+                To link Authenticator with an account, you typically scan a QR code provided by the service you're securing, which syncs the account with your Authenticator app. Alternatively, you can enter a setup key manually.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>What happens if I lose my phone?</span>
+                <span>Is Authenticator secure?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                Since all data is stored locally, you will need to set up your accounts again on a new device using the backup codes provided by each service. I recommend keeping backup codes in a secure place.
+                Yes, Authenticator apps are considered highly secure. Since the codes are generated on your device and change frequently, they are difficult for attackers to compromise. However, physical security of the device hosting the Authenticator is also crucial.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">General Issues</div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>What should I do if I fail to add an account by scanning the QR code?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                Ensure that your camera permission is enabled and the QR code is clear and well-lit. If the issue persists, you can try to add the account manually by entering the details.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>Is my data encrypted?</span>
+                <span>Why can't I use Face ID or Touch ID for verification?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                Yes. Your 2FA account data is encrypted on your device to protect it from unauthorized access.
+                Please verify that your device supports Face ID or Touch ID and that it is activated in your system settings. If you still face issues after correct setup, try restarting your device or reconfiguring Face ID or Touch ID in the settings.
             </div>
         </div>
 
         <div class="faq-item">
             <div class="question" onclick="toggleAnswer(this)">
-                <span>How can I contact the developer?</span>
+                <span>Will I lose my existing account information if I switch phones?</span>
                 <span class="icon">+</span>
             </div>
             <div class="answer">
-                You can reach me at supportdeepocen@gmail.com. I typically respond within 2 business days.
+                Not if you have previously backed up your accounts. You can back up via iCloud or other supported cloud services and restore on your new device.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>Does the Authenticator support syncing with Apple Watch?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                Yes. Ensure that your iPhone is properly paired with your Apple Watch and that the Apple Watch syncing feature is enabled within the Authenticator app.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>Where is my backup stored? How can I restore from a backup?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                Your backups are stored in your chosen cloud service, like iCloud. In the "Backup & Restore" settings, you can find options to restore from the selected backup file.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>What should I do if my one-time password does not work?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                Ensure that your device's time is accurately set and is configured to automatically synchronize. Discrepancies in time can render one-time passwords invalid.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>Can I recover an account if I accidentally deleted it?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                You can restore it from "Recently Deleted" if it was removed recently. If it has been cleared from there, you would need to restore from a previous backup.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>How should I update the Authenticator app?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                To ensure security and optimal performance, enable automatic app updates or regularly check for updates manually in the app store.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>What should I do if I encounter issues while using the Authenticator?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                If you encounter any problems, please contact our customer service team through the "Help" or "Contact Us" section of the app, and we will provide the necessary support.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>How can I make my accounts more secure?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                In addition to enabling two-step verification with the Authenticator, we recommend changing passwords regularly, using strong passwords, and avoiding the use of the same password across different services.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">Backup and Restore</div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>How do I set up automatic backups?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                In the "Backup & Restore" settings, activate the auto-backup option, set the start time, and the frequency of backups. You can choose to back up daily or weekly to ensure your data is always up to date.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>What should I pay attention to during backup and restoration?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                Ensure that your network connection is stable when backing up or restoring, and you are using the latest version of the Authenticator app. Also, the account used for backup should be the same as the one used for restoration.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">Technical Support</div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>How can I contact technical support?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                If you cannot find a solution in the FAQ, you can directly contact our technical support team via the "Contact Us" button within the app or by sending an email to our official support mailbox.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">Updates and Maintenance</div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="question" onclick="toggleAnswer(this)">
+                <span>What are the latest security features of the Authenticator?</span>
+                <span class="icon">+</span>
+            </div>
+            <div class="answer">
+                The Authenticator is regularly updated to include the latest security features and improvements. We advise users to always use the most recent version for the best protection.
             </div>
         </div>
     </div>

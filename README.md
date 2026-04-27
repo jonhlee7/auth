@@ -1,2 +1,2 @@
-# auth
-faq/terms
+# app
+faq/terms/privacy
